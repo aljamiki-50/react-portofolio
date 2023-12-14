@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  --accent-hover: rgba(165, 65, 65, 0.87);
+  --accent-color: rgba(9, 21, 35, 1);
+  /* background-color: 00FFEB; */
+  /* background-color: "hsl(232.7,27.3%,23.7%)"; */
+  /* primary1: "hsl(204,23.8%,95.9%)",
+  background1: "#0F1624",
+  accent1: "hsl(34.9,98.6%,72.9%)",
+  button: "hsl(205.1,100%,36.1%)",
+  background2: "hsl(232.7,27.3%,23.7%)", */
+  /* background-color: ; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+}
+
+
+body{
+
+  background-color: var(--accent-color);
+}
+
+
