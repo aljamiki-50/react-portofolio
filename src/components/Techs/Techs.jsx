@@ -41,10 +41,12 @@ const Techs = () => {
         <div className="  ring-indigo-700 py-4 xl:grid xl:grid-cols-3  lg:grid lg:grid-cols-3  ">
           {/* startig the base of the front end skills sets */}
           <div className=" flex flex-col ring-2   gap-y-4 items-center s:mb-4 md:mb-4   ">
-            <div className=" ">
+            <div className=" s:flex s:self-start   ">
               <DiReact className=" animate-pulse fill-red-800" size="3rem" />
+              <h3 className=" hidden s:flex text-left text-4xl font-semibold md:hidden ">Front End</h3>
+
             </div>
-            <h3 className=" text-left text-4xl font-semibold md:hidden ">Front End</h3>
+            <h3 className=" s:hidden text-left text-4xl font-semibold md:hidden ">Front End</h3>
             <ul className=" flex xl:flex-col xl:gap-y-5  lg:flex-col lg:gap-y-5  s:gap-x-4  md:gap-x-10    ">
               <li className=" hover:shadow-3xl  " >
                 <FaHtml5  className=" fill-white-800" size="3rem" />
@@ -62,10 +64,13 @@ const Techs = () => {
           </div>
           {/* startig the base of the BACK END   skills sets */}
           <div className=" flex flex-col ring-2   gap-y-4 items-center s:mb-4  md:mb-4   ">
-            <div className=" ">
+            
+            <div className=" s:flex s:gap-x-2 s:self-start ">
               <FaDatabase className=" animate-pulse fill-slate-400" size="3rem" />
+              <h3 className=" hidden s:flex text-left text-4xl font-semibold md:hidden  ">Back End</h3>
+
             </div>
-            <h3 className=" text-left text-4xl font-semibold md:hidden  ">Back End</h3>
+            <h3 className=" s:hidden text-left text-4xl font-semibold md:hidden  ">Back End</h3>
             <ul className=" flex xl:flex-col xl:gap-y-5   lg:flex-col lg:gap-y-5 s:gap-x-4  md:gap-x-10    ">
               <li className=" hover:shadow-3xl  " >
                 <FaHtml5  className=" fill-white-800" size="3rem" />
@@ -83,10 +88,12 @@ const Techs = () => {
           </div>
           {/* startig the base of the UI / UX  BASE   skills sets */}
           <div className=" flex flex-col ring-2   gap-y-4 items-center s:mb-4   ">
-            <div className=" ">
+            <div className=" s:flex s:gap-x-2 s:self-start">
               <SiAltiumdesigner className=" animate-pulse fill-slate-400" size="3rem" />
+              <h3 className=" hidden s:flex text-left text-4xl font-semibold md:hidden  ">UI / UX</h3>
+
             </div>
-            <h3 className=" text-left text-4xl font-semibold md:hidden  ">UI / UX</h3>
+            <h3 className=" s:hidden text-left text-4xl font-semibold md:hidden  ">UI / UX</h3>
             <ul className=" flex xl:flex-col xl:gap-y-5 s:gap-x-4 md:gap-x-10   lg:flex-col lg:gap-y-5    ">
               <li className=" hover:shadow-3xl  " >
                 <DiMaterializecss  className=" fill-indigo-300" size="3rem" />

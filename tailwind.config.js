@@ -45,7 +45,10 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+
+  ],
 };
 
 // --accent-color: rgba(9, 21, 35, 1);
