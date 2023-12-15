@@ -1,12 +1,22 @@
-import React from 'react';
+import React from "react";
 
-// import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
+import Section from "../../styles/Section"
+import SectionText from "../../styles/SectionText"
+import SectionTitle from "../../styles/SectionTitle"
+import Projects from "../Projects/Projects";
+
+// Rest of the code
+
 // import Button from '../../styles/GlobalComponents/Button';
 // import { LeftSection } from './HeroStyles';
 
-const Hero = (props) => (
-  <div>
-    it  s the hero sec
+const Hero = () => (
+  <div className=" mt-10  flex flex-col  box-border clear-both    ">
+     <Section />
+
+     {/* <SectionText />
+     <SectionTitle />  */}
+    {/* it s the hero sec */}
   </div>
 );
 

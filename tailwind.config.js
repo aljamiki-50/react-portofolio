@@ -20,9 +20,28 @@ export default {
     },
 
     extend: {
+      keyframes: {
+        bouncy: {
+          "0%, 100%": {
+            transform: "translateY(-5%)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "5%": {
+            transform: "none",
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
+      },
+      animation: {
+        bouncy: "bouncy 5s infinite",
+      },
       colors: {
         primary: " rgba(9, 21, 35, 1)",
         accent: " rgba(165, 65, 65, 0.87)",
+      },
+      boxShadow: {
+        // '3xl': '5px 35px 50px -50px white',
+        "3xl": "10px 10px 5px #888888",
       },
     },
   },

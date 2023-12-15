@@ -118,12 +118,17 @@ export const NavLink = styled.a`
   font-size: 1.5rem;
   line-height: 16px;
   color: white;
+  cursor: pointer;
+
 
   transition: 0.4s ease;
   &:hover {
     color: var(--accent-hover);
     opacity: 1;
     cursor: pointer;
+    box-shadow: 10px 10px 5px #888888;
+    /* box-shadow: 5px 5px 10px #888888, -5px -5px 10px #888888; */
+
   }
 `;
 

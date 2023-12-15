@@ -80,8 +80,8 @@ const Header = () => {
         <NavLink>
           <AiFillLinkedin />
         </NavLink>
-        <NavLink>
-          <AiFillInstagram />
+        <NavLink href="http://instgram.com">
+          <AiFillInstagram  />
         </NavLink>
         <NavLink>
           <AiTwotoneEdit />
