@@ -73,11 +73,11 @@ const Header = () => {
           <div className="md:flex flex  justify-between md:gap-x-24 self-center items-center gap-3   text-center ">
             <DiCssdeck className=" s:hidden md:scale-[1.9] " size="3rem" />
             {"  "}
-            <span className="md:scale-[1.9]  self-center">Portofolio</span>
+            <span className="md:scale-[1.9]  antialiased font-popins  self-center">Portofolio</span>
           </div>
         </Link>
       </Div1>
-      <Div2 className=" md:none  ">
+      <Div2 className=" md:none   antialiased font-popins ">
         <Link to="#Projects">
           <NavLink>Projects</NavLink>
         </Link>
@@ -121,7 +121,7 @@ const Header = () => {
                 // visibility: toggle ? "visible" : "hidden", // Optionally use visibility
               }}
             >
-              <ul className=" flex text-accent  flex-col z-10   align-middle    justify-start text-left gap-y-4  transition-all duration-[1000ms] ease delay-250    hover:divide-amber-400 ">
+              <ul className=" flex text-accent  flex-col z-10   align-middle  antialiased font-popins   justify-start text-left gap-y-4  transition-all duration-[1000ms] ease delay-250    hover:divide-amber-400 ">
                 <li>
                   <a href="#projects">Projects</a>
                 </li>
@@ -153,7 +153,7 @@ const Header = () => {
                     "
             >
               <ul
-                className=" hidden text-accent 
+                className="  antialiased font-popins hidden text-accent 
                flex-col   align-middle    justify-start text-left gap-y-4  transition-all duration-[1000ms] ease delay-250    hover:divide-amber-400 "
               >
                 <li>

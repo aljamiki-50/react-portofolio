@@ -18,15 +18,15 @@ import { SiAboutdotme } from "react-icons/si";
 const About = () => {
   return (
     <div id="About">
-      <div className="mt-10 ">
+      <div className="mt-10 font-poppins ">
         <div className="flex ps-4  flex-col">
           <h1 className=" flex gap-x-2  left-0 text-left py-6 text-7xl font-bold decoreation-4 text-{#0c0e14}  decoration-{#6687D7}   ">
             <SiAboutdotme className="" />
             <span className="text-center"> :-</span>
             {/* Technologies */}
           </h1>
-          <p className="   s:flex text-left prose-xl   italic ">
-            am  someone who enjoys
+          <p className=" font-poppins antialiased   s:flex text-left prose-xl   italic ">
+            Am  someone who enjoys
             engaging in meaningful and insightful conversations with others. I
             thrive on exploring a wide range of topics, from technology and
             science to arts and personal development. With a curiosity-driven
@@ -37,7 +37,7 @@ const About = () => {
           </p>
         </div>
         {/* The  BASE OF ABOUT ME SECTOIN    */}
-        <div className="  s:hidden  xl:gap-0 s:grid  s:grid-cols-1 s:gap-x-4 s:px-1  ps-4  ring-indigo-700 py-4 xl:grid xl:grid-cols-3  lg:grid lg:grid-cols-3  ">
+        <div className="  hidden  xl:gap-0   s:grid-cols-1 s:gap-x-4 s:px-1  ps-4  ring-indigo-700 py-4 xl:hidden xl:grid-cols-3  lg:grid lg:grid-cols-3  ">
           {/* startig the base of the ABOUT ME YEAR SEC  skills sets */}
           <div className=" flex flex-col xl:w-[40%] s:w-[100%]   ring-2   gap-y-4 items-center s:mb-4 md:mb-4   ">
             <div className="   self-start relative flex flex-row xl:text-left xl:relative    align-middle">

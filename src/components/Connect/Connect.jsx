@@ -45,7 +45,7 @@ const Connect = () => {
 
   return (
     <div>
-      <div id="Connect" className="mt-10 ring-4 ring-red-600">
+      <div id="Connect" className="mt-10 ring-2 ring-transparent ">
         {/* Start of the talk section */}
         <div className="flex ps-4  flex-col">
           <h1 className=" flex gap-x-2  left-0 text-left py-6 text-7xl font-bold decoreation-4 text-{#0c0e14}  decoration-{#6687D7}   ">
@@ -53,7 +53,7 @@ const Connect = () => {
             <span className="text-center"> :-</span>
             {/* LET s talk sect */}
           </h1>
-          <p className="   s:flex text-left prose-xl s:w-[90%]  border-b-4 border-b-neutral-200 ">
+          <p className="  font-poppins antialiased  s:flex text-left prose-xl s:w-[90%] pb-4  border-b-4  border-b-accent/70 ">
             "Feel free to reach out through the provided contact information—I'm
             always open for collaboration, discussions, and opportunities to
             connect."

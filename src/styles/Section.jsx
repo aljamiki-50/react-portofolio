@@ -29,7 +29,7 @@ const Section = () => {
       items-center  justify-between ">
       {/* <div className=" bg-red-400 p-16 w-full  -z-0 opacity-40 absolute "></div> */}
       <div className="text-left flex -z-10    flex-col gap-y-10">
-        <h1 className=" text-5xl md:text-5xl -z-10 table-caption  leading-[90px] flex-col
+        <h1 className="   antialiased font-popins text-5xl md:text-5xl -z-10 table-caption  leading-[90px] flex-col
         s:leading-[70px]
         s:text-center
           s:text-xl ">
@@ -44,8 +44,8 @@ const Section = () => {
           className="  s:mt-10  animate-bouncy hidden s:flex s:rounded-full bg-white w-full h-full "
           alt=""
         />
-        <h2 className=" xl:text-2xl s:text-center  ">🚀 Aspiring Junior Full-Stack Developer </h2>
-        <p className=" md:w-[50%]  lg:w-[50%]  xl:w-[90%] antialiased md:leading-8 sm:leading-1 sm:w-[100%]  s:text-center   ">
+        <h2 className=" xl:text-2xl s:text-center  antialiased font-popins  ">🚀 Aspiring Junior Full-Stack Developer </h2>
+        <p className="  antialiased font-popins md:w-[50%]  lg:w-[50%]  xl:w-[90%]  font md:leading-8 sm:leading-1 sm:w-[100%]  s:text-center   ">
           💻 Passionate about Building Innovative Solutions
         </p>
         <button

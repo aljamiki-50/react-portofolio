@@ -54,6 +54,9 @@ export default {
         // '3xl': '5px 35px 50px -50px white',
         "3xl": "10px 10px 5px #888888",
       },
+      fontFamily: {
+        sans: ['Roboto', 'Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [
