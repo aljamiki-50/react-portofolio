@@ -9,6 +9,9 @@ import Projects from "./components/Projects/Projects";
 import Techs from "./components/Techs/Techs"; 
 // import About from "./components/About/About";
 import About from "../src/components/About/About.jsx";
+import Connect from "../src/components/Connect/Connect.jsx";
+
+
 
 function App() {
   return (
@@ -19,6 +22,8 @@ function App() {
         <Projects/>
         <Techs/>
         <About/>
+        <Connect/>
+        
         {/* <Projects/> */}
        
 

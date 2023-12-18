@@ -12,7 +12,8 @@ import { FaLaravel } from "react-icons/fa";
 import { SiLivewire } from "react-icons/si";
 
 const Projects = () => (
-  <div className="  grid grid-cols-2  gap-x-4 gap-y-6  justify-center  mt-10 ring-4 px-10 py-12 md:grid md:grid-cols-1 md:gap-y-10 s:grid-cols-1 s:px-0 s:gap-y-12 s:ring-0     ">
+  <div id="projects"
+   className="  grid grid-cols-2  gap-x-4 gap-y-6  justify-center  mt-10 ring-4 px-10 py-12 md:grid md:grid-cols-1 md:gap-y-10 s:grid-cols-1 s:px-0 s:gap-y-12 s:ring-0     ">
     {/* It s the 1st project demo */}
     {/* It s the 1st project demo */}
     <div

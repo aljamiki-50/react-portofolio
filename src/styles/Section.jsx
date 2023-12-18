@@ -1,23 +1,56 @@
-import React from "react";
-import  liam from "../assets/liam.png"
+import React, { useState, useEffect } from "react";
+import liam from "../assets/liam.png";
 
 const Section = () => {
+  const [welcomeWords, setWelcomeWords] = useState([
+    "Welcome",
+    "привет",
+    "Привіт",
+    "مَرْحَبًا",
+    // Add more words as needed
+  ]);
+
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prevIndex) =>
+        prevIndex === welcomeWords.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [welcomeWords]);
+
   return (
-    <div className=" relative ">
+    <div className=" relative
+    s:flex s:flex-cols-1 s:gap-x-[70px] s:justify-center s:align-middle
+     xl:grid xl:grid-cols-2 xl:gap-x-[70px]
+      items-center  justify-between ">
       {/* <div className=" bg-red-400 p-16 w-full  -z-0 opacity-40 absolute "></div> */}
-      <div className="text-left flex z-10   flex-col gap-y-10">
-        <h1 className=" text-7xl md:text-5xl   s:text-xl ">
-          Welcome To <br /> My Personal Portfolio
+      <div className="text-left flex -z-10    flex-col gap-y-10">
+        <h1 className=" text-5xl md:text-5xl -z-10 table-caption  leading-[90px] flex-col
+        s:leading-[70px]
+        s:text-center
+          s:text-xl ">
+          <span className="  
+          animate-pingy  transition-color text-5xl    text-cyan-200 uppercase">
+            {welcomeWords[currentWordIndex]}
+          </span>
+          <br /> <span>&#x1F44B; </span> To My Personal Space!
         </h1>
-        <img src={liam} className="  s:mt-10  animate-bouncy hidden s:flex s:rounded-full bg-white w-full h-full " alt="" />
-        <p className=" md:w-[50%] lg:w-[50%] antialiased md:leading-8 sm:leading-1 sm:w-[100%] s:hidden  ">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, ipsa!
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, ipsa!
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, ipsa!
+        <img
+          src={liam}
+          className="  s:mt-10  animate-bouncy hidden s:flex s:rounded-full bg-white w-full h-full "
+          alt=""
+        />
+        <h2 className=" xl:text-2xl s:text-center  ">🚀 Aspiring Junior Full-Stack Developer </h2>
+        <p className=" md:w-[50%]  lg:w-[50%]  xl:w-[90%] antialiased md:leading-8 sm:leading-1 sm:w-[100%]  s:text-center   ">
+          💻 Passionate about Building Innovative Solutions
         </p>
         <button
           className="  
-          s:hidden
+          hidden
          py-4 px-8 ring-2 
           w-max rounded-[30px] 
            tracking-wide
@@ -35,6 +68,9 @@ const Section = () => {
         >
           Explore More
         </button>
+      </div>
+      <div className="hidden xl:block" >
+        <img src={liam} className=" text-center w-[80%]" alt="" />
       </div>
     </div>
   );

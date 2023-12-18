@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import {
   AiFillGithub,
   AiFillInstagram,
@@ -22,8 +22,10 @@ import {
 } from "./HeaderStyles";
 
 const Header = () => {
-  const [toggle, setToggle] = React.useState(false);
+  const [toggle, setToggle] = useState(false);
   const linkref = useRef(null);
+  const menuRef = useRef(null);
+
 
   const swap = () => {
     setToggle(!toggle);
@@ -33,14 +35,25 @@ const Header = () => {
     } else {
       current.style.color = "var(--accent-hover)";
     }
-
-    // alert("hey been clicked"); // Toggles the state between true and false
-    // console.log("hey");
   };
 
-  // const handleClick = () => {
-  //   setToggle(!toggle); // Toggles the state between true and false
+
+  // const handleClickOutside = (event) => {
+  //   const { current } = menuRef;
+  //   console.log(!menuRef.current);
+
+  //   if (current && !current.contains(event.target)) {
+  //     setToggle(false);
+  //   }
   // };
+
+  // useEffect(() => {
+  //   document.addEventListener("click", handleClickOutside);
+
+  //   return () => {
+  //     document.removeEventListener("click", handleClickOutside);
+  //   };
+  // }, []);
 
   return (
     <Container className="  md:mt-2 ">
@@ -81,7 +94,7 @@ const Header = () => {
           <AiFillLinkedin />
         </NavLink>
         <NavLink href="http://instgram.com">
-          <AiFillInstagram  />
+          <AiFillInstagram />
         </NavLink>
         <NavLink>
           <AiTwotoneEdit />
@@ -90,32 +103,38 @@ const Header = () => {
           <AiFillGithub />
         </NavLink>
       </Div3>
-      <Div4 className=" relative  ">
-        {!toggle ? (
+      <Div4 ref={menuRef} className=" relative  ">
+        {toggle ? (
           <>
             <ImCross
               className="transition-all duration-500 ease-in-out md:scale-[2.9] hover:bg-red-300"
               onClick={swap}
             />
             <div
-              className=" z-10 bg-transpernt  text-primary   py-2 absolute top-10 right-[0.5px] 
+              className=" z-10 bg-transparent  text-primary   py-2 absolute top-10 right-[0.5px] 
                transition-all duration-[700ms]
                 ease-linear 
                 md:scale-[1.9] md:top-32 md:right-10
                     "
+              style={{
+                opacity: toggle ? 1 : 0, // Set opacity based on toggle state
+                // visibility: toggle ? "visible" : "hidden", // Optionally use visibility
+              }}
             >
-              <ul className=" flex text-accent  flex-col   align-middle    justify-start text-left gap-y-4  transition-all duration-[1000ms] ease delay-250    hover:divide-amber-400 ">
+              <ul className=" flex text-accent  flex-col z-10   align-middle    justify-start text-left gap-y-4  transition-all duration-[1000ms] ease delay-250    hover:divide-amber-400 ">
                 <li>
-                  <a href="#">Projects</a>
+                  <a href="#projects">Projects</a>
                 </li>
                 <li>
-                  <a href="#">Tech</a>
+                  <a href="#Tech" className=" smooth-scroll">
+                    Tech
+                  </a>
                 </li>
                 <li>
-                  <a href="#">About</a>
+                  <a href="#About">About</a>
                 </li>
                 <li className=" flex  ">
-                  <a href="#">Linked In</a>
+                  <a href="#Connect">Connect </a>
                 </li>
               </ul>
             </div>
@@ -126,14 +145,17 @@ const Header = () => {
               className=" transition-opacity duration-1000 ease-in-out scroll-smooth  md:scale-[2.9]  focus:bg-red-300"
               onClick={swap}
             />
-             <div
+            <div
               className=" z-10 bg-transpernt  text-primary opacity-0   py-2 absolute top-10 right-[0.5px] 
                transition-all duration-[700ms]
                 ease-linear delay-[100 ms]
                 md:scale-[1.9] md:top-32 md:right-10
                     "
             >
-              <ul className=" flex text-accent  flex-col   align-middle    justify-start text-left gap-y-4  transition-all duration-[1000ms] ease delay-250    hover:divide-amber-400 ">
+              <ul
+                className=" hidden text-accent 
+               flex-col   align-middle    justify-start text-left gap-y-4  transition-all duration-[1000ms] ease delay-250    hover:divide-amber-400 "
+              >
                 <li>
                   <a href="#">Projects</a>
                 </li>

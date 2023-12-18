@@ -37,5 +37,8 @@ body{
 
   background-color: var(--accent-color);
 }
+html {
+  scroll-behavior: smooth;
+}
 
 

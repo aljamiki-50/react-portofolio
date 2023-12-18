@@ -30,11 +30,22 @@ export default {
             transform: "none",
             animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
           },
+        },ping: {
+          '75%, 100%': {
+            transform: 'scale(2)',
+            opacity: 0,
+          },
         },
       },
       animation: {
         bouncy: "bouncy 5s infinite",
+        pingy: 'ping 8s cubic-bezier(0, 0, 0.2, 1) infinite',
+
       },
+
+
+      
+      
       colors: {
         primary: " rgba(9, 21, 35, 1)",
         accent: " rgba(165, 65, 65, 0.87)",
