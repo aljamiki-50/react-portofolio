@@ -426,7 +426,7 @@ bg-transparent ">
               <FaGithub className=" fill-blue-200" size={32} />
             </a>
             <a
-              href="https://strong-kheer-1f5c1b.netlify.app/"
+              href="https://eloquent-genie-c957b6.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
