@@ -113,7 +113,7 @@ const Projects = () => {
               <FaGithub className=" fill-blue-200" size={32} />
             </a>
             <a
-              href="https://playful-otter-9d969a.netlify.app/"
+              href="https://65819ed27b7a6f11049401e9--shiny-parfait-654303.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className=""

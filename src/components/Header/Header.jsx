@@ -26,8 +26,7 @@ import {
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
-  const linkref = useRef(null);
-  const menuRef = useRef(null);
+  
 
   const swap = () => {
     setToggle(!toggle);
@@ -39,28 +38,16 @@ const Header = () => {
     }
   };
 
-  // const handleClickOutside = (event) => {
-  //   const { current } = menuRef;
-  //   console.log(!menuRef.current);
+  
 
-  //   if (current && !current.contains(event.target)) {
-  //     setToggle(false);
-  //   }
-  // };
 
-  // useEffect(() => {
-  //   document.addEventListener("click", handleClickOutside);
 
-  //   return () => {
-  //     document.removeEventListener("click", handleClickOutside);
-  //   };
-  // }, []);
 
   return (
     <Container className="  md:mt-2 ">
       <Div1>
         <Link
-          ref={linkref}
+          // ref={linkref}
           className=" "
           style={{
             display: "flex",
@@ -93,20 +80,24 @@ const Header = () => {
         {/* <div className="s:hidden">hey it s  me </div> */}
       </Div2>
       <Div3 className=" s:hidden md:hidden">
-        <NavLink href="https://www.linkedin.com/">
+        <NavLink  target="_blank"
+              rel="noopener noreferrer"href="https://www.linkedin.com/">
           <AiFillLinkedin />
         </NavLink>
-        <NavLink href="http://instgram.com">
+        <NavLink target="_blank"
+              rel="noopener noreferrer" href="http://instgram.com">
           <AiFillInstagram />
         </NavLink>
-        <NavLink href="#Connect">
+        <NavLink target="_blank"
+              rel="noopener noreferrer" href="#Connect">
           <AiTwotoneEdit />
         </NavLink>
-        <NavLink>
+        <NavLink target="_blank"
+              rel="noopener noreferrer"   href="https://github.com/aljamiki-50" >
           <AiFillGithub />
         </NavLink>
       </Div3>
-      <Div4 ref={menuRef} className=" relative  ">
+      <Div4  className=" relative  ">
         {toggle ? (
           <>
             <ImCross
