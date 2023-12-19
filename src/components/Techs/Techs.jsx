@@ -9,10 +9,12 @@ import { FaDatabase } from "react-icons/fa6";
 import { SiPhp } from "react-icons/si";
 import { SiNextui } from "react-icons/si";
 import { SiAltiumdesigner } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
+// import { SiTailwindcss } from "react-icons/si";
 import { BsBootstrap } from "react-icons/bs";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFigma } from "react-icons/fa6";
+import { SiAlpinedotjs, SiTailwindcss } from "react-icons/si";
+
 
 import "typeface-poppins";
 import "typeface-roboto";
@@ -20,8 +22,13 @@ import "typeface-roboto";
 const Techs = () => {
   return (
     <div className=" scroll-smooth " id="Tech">
-      <div className="mt-10  s:mt-[60px]">
-        <div className="flex ps-4 md:mb-6  flex-col">
+      <div className="mt-10  s:mt-[60px]
+      lg:pb-4  lg:border-b-4  lg:border-b-accent/70
+      xl:pb-4  xl:border-b-4  xl:border-b-accent/70
+
+      ">
+        <div className="flex ps-4 md:mb-6
+          flex-col">
           <h1 className=" flex gap-x-2  left-0 text-left py-6 text-7xl font-bold decoreation-4 text-{#0c0e14}  decoration-{#6687D7}   ">
             <GrTechnology />
             <span> :-</span>
@@ -82,16 +89,22 @@ const Techs = () => {
              lg:flex-col lg:gap-y-5  s:gap-x-4  md:gap-x-10  md:flex-2   "
             >
               <li className=" hover:shadow-3xl  ">
-                <FaHtml5 className=" fill-white-800" size="3rem" />
+                <FaHtml5 className=" fill-white-800" title="Html" size="3rem" />
+              </li>
+              
+              <li className=" hover:shadow-3xl  ">
+                <FaLaravel className=" fill-red-800"  title="Laravel" size="3rem" />
               </li>
               <li className=" hover:shadow-3xl  ">
-                <FaLaravel className=" fill-red-800" size="3rem" />
+                <FaReact className=" fill-cyan-800 "  title="React" size="3rem" />
               </li>
               <li className=" hover:shadow-3xl  ">
-                <FaReact className=" fill-cyan-800 " size="3rem" />
+                <SiLivewire className=" fill-pink-600 "  title="Livewire" size="3rem" />
+
               </li>
               <li className=" hover:shadow-3xl  ">
-                <SiLivewire className=" fill-pink-600 " size="3rem" />
+                <SiAlpinedotjs className=" fill-pink-200 "  title="Alpinedotjs" size="3rem" />
+
               </li>
             </ul>
             <div className="  s:border-b-8  s:border-b-orange-600 
@@ -128,17 +141,22 @@ const Techs = () => {
                 <FaHtml5 className=" fill-white-800" size="3rem" />
               </li>
               <li className=" hover:shadow-3xl  ">
-                <FaPhp className=" fill-cyan-800 " size="3rem" />
+                <SiAlpinedotjs className=" fill-pink-200 "  title="Alpinedotjs" size="3rem" />
+
               </li>
               <li className=" hover:shadow-3xl  ">
-                <FaLaravel className="  fill-red-800  " size="3rem" />
+                <FaPhp className=" fill-cyan-800 "  size="3rem" />
               </li>
               <li className=" hover:shadow-3xl  ">
-                <SiLivewire className=" fill-pink-600 " size="3rem" />
+                <FaLaravel className="  fill-red-800  "  title="Laravel" size="3rem" />
+              </li>
+              <li className=" hover:shadow-3xl  ">
+                <SiLivewire className=" fill-pink-600 "  title="Livewire" size="3rem" />
               </li>
             </ul>
             <div className="  s:border-b-8  s:border-b-orange-600 
             md:w-[50%] md:my-0  md:pt-8    md:border-b-8  md:border-b-orange-600 
+            
             s:my-0  s:pt-8   mx-auto s:w-[50%] xl:hidden " />
           </div>
           {/* <div className="  s:border-b-8  s:border-b-orange-600  mx-auto s:w-[50%] xl:hidden  " /> */}
@@ -168,16 +186,17 @@ const Techs = () => {
             </h3>
             <ul className=" flex xl:flex-col xl:gap-y-5 s:gap-x-4 md:gap-x-10   lg:flex-col lg:gap-y-5    ">
               <li className=" hover:shadow-3xl  ">
-                <DiMaterializecss className=" fill-indigo-300" size="3rem" />
+                <DiMaterializecss className=" fill-indigo-300"  title="Materializecss" size="3rem" />
               </li>
               <li className=" hover:shadow-3xl  ">
-                <SiTailwindcss className=" fill-cyan-800 " size="3rem" />
+                <SiTailwindcss className=" fill-cyan-800 "  title="TailwindCss"  size="3rem" />
               </li>
               <li className=" hover:shadow-3xl  ">
-                <BsBootstrap className="  fill-red-600  " size="3rem" />
+                <BsBootstrap className="  fill-red-600  "  title="BootStrap" size="3rem" />
               </li>
               <li className=" hover:shadow-3xl  ">
-                <FaFigma className=" fill-pink-200 " size="3rem" />
+                <FaFigma className=" fill-pink-200 "  title="Figma" icon="Figma
+                " size="3rem" />
               </li>
             </ul>
             <div

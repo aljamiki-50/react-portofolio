@@ -29,6 +29,7 @@ function App() {
 
         <Routes>
           <Route path="/react" element={<Hero />} />
+{/* <Route path="/projects" element={<Projects />} /> */}
         </Routes>
        
       </Router>

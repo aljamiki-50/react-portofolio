@@ -10,6 +10,9 @@ import { GrMenu } from "react-icons/gr";
 import { DiCssdeck } from "react-icons/di";
 import { ImCross } from "react-icons/im";
 
+import { Route } from "react-router-dom";
+import Projects from "../Projects/Projects";
+
 import { Link } from "react-router-dom";
 import {
   Container,
@@ -26,7 +29,6 @@ const Header = () => {
   const linkref = useRef(null);
   const menuRef = useRef(null);
 
-
   const swap = () => {
     setToggle(!toggle);
     const { current } = linkref;
@@ -36,7 +38,6 @@ const Header = () => {
       current.style.color = "var(--accent-hover)";
     }
   };
-
 
   // const handleClickOutside = (event) => {
   //   const { current } = menuRef;
@@ -73,30 +74,32 @@ const Header = () => {
           <div className="md:flex flex  justify-between md:gap-x-24 self-center items-center gap-3   text-center ">
             <DiCssdeck className=" s:hidden md:scale-[1.9] " size="3rem" />
             {"  "}
-            <span className="md:scale-[1.9]  antialiased font-popins  self-center">Portofolio</span>
+            <span className="md:scale-[1.9]  antialiased font-popins  self-center">
+              Portofolio
+            </span>
           </div>
         </Link>
       </Div1>
       <Div2 className=" md:none   antialiased font-popins ">
-        <Link to="#Projects">
+        <a href="#projects">
           <NavLink>Projects</NavLink>
-        </Link>
-        <Link to="#Projects">
+        </a>
+        <a href="#Tech">
           <NavLink>Tech</NavLink>
-        </Link>
-        <Link to="#Projects">
+        </a>
+        <a href="#About" >
           <NavLink>About</NavLink>
-        </Link>
+        </a>
         {/* <div className="s:hidden">hey it s  me </div> */}
       </Div2>
       <Div3 className=" s:hidden md:hidden">
-        <NavLink>
+        <NavLink href="https://www.linkedin.com/">
           <AiFillLinkedin />
         </NavLink>
         <NavLink href="http://instgram.com">
           <AiFillInstagram />
         </NavLink>
-        <NavLink>
+        <NavLink href="#Connect">
           <AiTwotoneEdit />
         </NavLink>
         <NavLink>

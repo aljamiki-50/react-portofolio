@@ -25,7 +25,9 @@ const About = () => {
             <span className="text-center"> :-</span>
             {/* Technologies */}
           </h1>
-          <p className=" font-poppins antialiased   s:flex text-left prose-xl   italic ">
+          <p className=" font-poppins antialiased   s:flex text-left prose-xl   italic pb-4  
+         lg:pb-4  lg:border-b-4  lg:border-b-accent/70
+         xl:pb-4  xl:border-b-4  xl:border-b-accent/70  ">
             Am  someone who enjoys
             engaging in meaningful and insightful conversations with others. I
             thrive on exploring a wide range of topics, from technology and
@@ -37,7 +39,7 @@ const About = () => {
           </p>
         </div>
         {/* The  BASE OF ABOUT ME SECTOIN    */}
-        <div className="  hidden  xl:gap-0   s:grid-cols-1 s:gap-x-4 s:px-1  ps-4  ring-indigo-700 py-4 xl:hidden xl:grid-cols-3  lg:grid lg:grid-cols-3  ">
+        <div className="  hidden  xl:gap-0   s:grid-cols-1 s:gap-x-4 s:px-1  ps-4  ring-indigo-700 py-4 xl:hidden xl:grid-cols-3  lg:hidden lg:grid-cols-3  ">
           {/* startig the base of the ABOUT ME YEAR SEC  skills sets */}
           <div className=" flex flex-col xl:w-[40%] s:w-[100%]   ring-2   gap-y-4 items-center s:mb-4 md:mb-4   ">
             <div className="   self-start relative flex flex-row xl:text-left xl:relative    align-middle">

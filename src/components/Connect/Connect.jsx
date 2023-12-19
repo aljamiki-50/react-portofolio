@@ -53,7 +53,7 @@ const Connect = () => {
             <span className="text-center"> :-</span>
             {/* LET s talk sect */}
           </h1>
-          <p className="  font-poppins antialiased  s:flex text-left prose-xl s:w-[90%] pb-4  border-b-4  border-b-accent/70 ">
+          <p className="  font-roboto antialiased  s:flex text-left prose-xl s:w-[90%] pb-4  border-b-4  border-b-accent/70 ">
             "Feel free to reach out through the provided contact information—I'm
             always open for collaboration, discussions, and opportunities to
             connect."
@@ -158,7 +158,7 @@ const Connect = () => {
               rel="noopener noreferrer"
             >
               {" "}
-              <PiTelegramLogo className=" fill-blue-400" size="3rem" />
+              <PiTelegramLogo className=" fill-blue-400"  title="Telegram" size="3rem" />
             </a>
 
             <a
@@ -167,7 +167,7 @@ const Connect = () => {
               href="https://www.linkedin.com/in/liam-musa50/"
             >
               {" "}
-              <PiLinkedinLogo className=" fill-blue-400" size="3rem" />
+              <PiLinkedinLogo className=" fill-blue-400"  title="LinkedIn" size="3rem" />
             </a>
 
             <a
@@ -175,7 +175,7 @@ const Connect = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillMail className=" fill-accent" size="3rem" />
+              <AiFillMail className=" fill-accent"  title="Mail" size="3rem" />
             </a>
           </div>
         </div>
