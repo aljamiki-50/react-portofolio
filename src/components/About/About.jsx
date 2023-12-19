@@ -14,6 +14,7 @@ import { BsBootstrap } from "react-icons/bs";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFigma } from "react-icons/fa6";
 import { SiAboutdotme } from "react-icons/si";
+import { IoCloudDownloadOutline } from "react-icons/io5";
 
 const About = () => {
   return (
@@ -23,19 +24,27 @@ const About = () => {
           <h1 className=" flex gap-x-2  left-0 text-left py-6 text-7xl font-bold decoreation-4 text-{#0c0e14}  decoration-{#6687D7}   ">
             <SiAboutdotme className="" />
             <span className="text-center"> :-</span>
+            <span>
+              {/* /path/to/your/cv.pdf */}
+              {/* <a href="#" download> */}
+
+              {/* </a> */}
+            </span>
+
             {/* Technologies */}
           </h1>
-          <p className=" font-poppins antialiased   s:flex text-left prose-xl   italic pb-4  
+          <p
+            className=" font-poppins antialiased   s:flex text-left prose-xl   italic pb-4  
          lg:pb-4  lg:border-b-4  lg:border-b-accent/70
-         xl:pb-4  xl:border-b-4  xl:border-b-accent/70  ">
-            Am  someone who enjoys
-            engaging in meaningful and insightful conversations with others. I
-            thrive on exploring a wide range of topics, from technology and
-            science to arts and personal development. With a curiosity-driven
-            mindset, I appreciate the opportunity to learn and share knowledge if i could  .
-            A friendly and approachable individual, I find joy in connecting
-            with others and discovering new perspectives.  
-
+         xl:pb-4  xl:border-b-4  xl:border-b-accent/70  "
+          >
+            Am someone who enjoys engaging in meaningful and insightful
+            conversations with others. I thrive on exploring a wide range of
+            topics, from technology and science to arts and personal
+            development. With a curiosity-driven mindset, I appreciate the
+            opportunity to learn and share knowledge if i could . A friendly and
+            approachable individual, I find joy in connecting with others and
+            discovering new perspectives.
           </p>
         </div>
         {/* The  BASE OF ABOUT ME SECTOIN    */}

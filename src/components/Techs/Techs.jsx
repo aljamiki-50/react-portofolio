@@ -14,7 +14,9 @@ import { BsBootstrap } from "react-icons/bs";
 import { DiMaterializecss } from "react-icons/di";
 import { FaFigma } from "react-icons/fa6";
 import { SiAlpinedotjs, SiTailwindcss } from "react-icons/si";
-
+import Stars from "./stars";
+import Stars4 from "./Stars4";
+import Stars35 from "./Stars35"
 
 import "typeface-poppins";
 import "typeface-roboto";
@@ -22,13 +24,17 @@ import "typeface-roboto";
 const Techs = () => {
   return (
     <div className=" scroll-smooth " id="Tech">
-      <div className="mt-10  s:mt-[60px]
+      <div
+        className="mt-10  s:mt-[60px]
       lg:pb-4  lg:border-b-4  lg:border-b-accent/70
       xl:pb-4  xl:border-b-4  xl:border-b-accent/70
 
-      ">
-        <div className="flex ps-4 md:mb-6
-          flex-col">
+      "
+      >
+        <div
+          className="flex ps-4 md:mb-6
+          flex-col"
+        >
           <h1 className=" flex gap-x-2  left-0 text-left py-6 text-7xl font-bold decoreation-4 text-{#0c0e14}  decoration-{#6687D7}   ">
             <GrTechnology />
             <span> :-</span>
@@ -69,10 +75,7 @@ const Techs = () => {
              
             s:flex s:self-start   "
             >
-              <DiReact
-                className="   animate-pulse fill-red-800"
-                size="3rem"
-              />
+              <DiReact className="   animate-pulse fill-red-800" size="3rem" />
               <h3
                 className=" antialiased font-popins hidden
               
@@ -85,31 +88,98 @@ const Techs = () => {
               Front End :
             </h3>
             <ul
-              className=" flex xl:flex-col xl:gap-y-5 
-             lg:flex-col lg:gap-y-5  s:gap-x-4  md:gap-x-10  md:flex-2   "
+              className=" flex 
+              xl:flex-col xl:gap-y-5 
+             lg:flex-col lg:gap-y-5 
+               md:gap-x-10  md:flex-2 
+                s:grid s:grid-cols-2
+                 "
             >
-              <li className=" hover:shadow-3xl  ">
+              <li
+                className=" hover:shadow-3xl
+               xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3
+
+                 "
+              >
                 <FaHtml5 className=" fill-white-800" title="Html" size="3rem" />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars />
+                </span>
               </li>
-              
-              <li className=" hover:shadow-3xl  ">
-                <FaLaravel className=" fill-red-800"  title="Laravel" size="3rem" />
-              </li>
-              <li className=" hover:shadow-3xl  ">
-                <FaReact className=" fill-cyan-800 "  title="React" size="3rem" />
-              </li>
-              <li className=" hover:shadow-3xl  ">
-                <SiLivewire className=" fill-pink-600 "  title="Livewire" size="3rem" />
 
+              <li
+                className=" hover:shadow-3xl 
+               xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3 "
+              >
+                <FaLaravel
+                  className=" fill-red-800"
+                  title="Laravel"
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars35 />
+                </span>
               </li>
-              <li className=" hover:shadow-3xl  ">
-                <SiAlpinedotjs className=" fill-pink-200 "  title="Alpinedotjs" size="3rem" />
+              <li
+                className=" hover:shadow-3xl   xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3 "
+              >
+                <FaReact
+                  className=" fill-cyan-800 "
+                  title="React"
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars35 />
+                </span>
+              </li>
+              <li
+                className=" hover:shadow-3xl  xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3 "
+              >
+                <SiLivewire
+                  className=" fill-pink-600 "
+                  title="Livewire"
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars35 />
 
+                </span>
+              </li>
+              <li
+                className=" hover:shadow-3xl xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3  "
+              >
+                <SiAlpinedotjs
+                  className=" fill-pink-200 "
+                  title="Alpinedotjs"
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars35 />
+
+                </span>
               </li>
             </ul>
-            <div className="  s:border-b-8  s:border-b-orange-600 
+            <div
+              className="  s:border-b-8  s:border-b-orange-600 
             md:w-[50%] md:my-0  md:pt-8    md:border-b-8  md:border-b-orange-600 
-            s:my-0  s:pt-8   mx-auto s:w-[50%] xl:hidden " />
+            
+            s:my-0  s:pt-8   mx-auto s:w-[50%] xl:hidden "
+            />
           </div>
           {/* startig the base of the BACK END   skills sets */}
           <div
@@ -136,28 +206,92 @@ const Techs = () => {
             <h3 className="  antialiased font-popins s:hidden text-left text-4xl font-semibold md:hidden  ">
               Back End :
             </h3>
-            <ul className=" flex xl:flex-col xl:gap-y-5   lg:flex-col lg:gap-y-5 s:gap-x-4  md:gap-x-10    ">
-              <li className=" hover:shadow-3xl  ">
-                <FaHtml5 className=" fill-white-800" size="3rem" />
-              </li>
-              <li className=" hover:shadow-3xl  ">
-                <SiAlpinedotjs className=" fill-pink-200 "  title="Alpinedotjs" size="3rem" />
+            <ul
+              className=" flex xl:flex-col xl:gap-y-5   lg:flex-col lg:gap-y-5
+             s:gap-x-4  s:grid s:grid-cols-2
+               md:gap-x-10   md:gap-y-5   "
+            >
+              <li
+                className=" hover:shadow-3xl 
+                xl:flex xl:flex-col xl:items-center xl:gap-y-1
+                lg:flex lg:flex-col lg:items-center lg:gap-y-2
+                s:flex s:flex-col s:items-center s:gap-y-3 md:gap-
 
+               "
+              >
+                <FaHtml5 className=" fill-white-800" size="3rem" />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars />
+                </span>
               </li>
-              <li className=" hover:shadow-3xl  ">
-                <FaPhp className=" fill-cyan-800 "  size="3rem" />
+              <li
+                className=" hover:shadow-3xl
+                xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3 md:gap-  "
+              >
+                <SiAlpinedotjs
+                  className=" fill-pink-200 "
+                  title="Alpinedotjs"
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars35 />
+                </span>
               </li>
-              <li className=" hover:shadow-3xl  ">
-                <FaLaravel className="  fill-red-800  "  title="Laravel" size="3rem" />
+              <li
+                className=" hover:shadow-3xl
+                xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3 md:gap-  "
+              >
+                <FaPhp className=" fill-cyan-800 " size="3rem" />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars35 />
+                </span>
               </li>
-              <li className=" hover:shadow-3xl  ">
-                <SiLivewire className=" fill-pink-600 "  title="Livewire" size="3rem" />
+              <li
+                className=" hover:shadow-3xl
+                xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3 md:gap-  "
+              >
+                <FaLaravel
+                  className="  fill-red-800  "
+                  title="Laravel"
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars35 />
+                </span>
+              </li>
+              <li
+                className=" hover:shadow-3xl
+                xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3 md:gap-  "
+              >
+                <SiLivewire
+                  className=" fill-pink-600 "
+                  title="Livewire"
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars35 />
+                </span>
               </li>
             </ul>
-            <div className="  s:border-b-8  s:border-b-orange-600 
+            <div
+              className="  s:border-b-8  s:border-b-orange-600 
             md:w-[50%] md:my-0  md:pt-8    md:border-b-8  md:border-b-orange-600 
             
-            s:my-0  s:pt-8   mx-auto s:w-[50%] xl:hidden " />
+            s:my-0  s:pt-8   mx-auto s:w-[50%] xl:hidden "
+            />
           </div>
           {/* <div className="  s:border-b-8  s:border-b-orange-600  mx-auto s:w-[50%] xl:hidden  " /> */}
 
@@ -184,19 +318,72 @@ const Techs = () => {
             <h3 className="  antialiased font-popins s:hidden text-left text-4xl font-semibold md:hidden  ">
               UI / UX :
             </h3>
-            <ul className=" flex xl:flex-col xl:gap-y-5 s:gap-x-4 md:gap-x-10   lg:flex-col lg:gap-y-5    ">
-              <li className=" hover:shadow-3xl  ">
-                <DiMaterializecss className=" fill-indigo-300"  title="Materializecss" size="3rem" />
+            <ul
+              className=" flex xl:flex-col xl:gap-y-5 s:gap-x-4 md:gap-x-10
+             s:grid s:grid-cols-2 s:gap-y-2
+               lg:flex-col lg:gap-y-5    "
+            >
+              <li
+                className=" hover:shadow-3xl xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3   "
+              >
+                <DiMaterializecss
+                  className=" fill-indigo-300"
+                  title="Materializecss"
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars />
+                </span>
               </li>
-              <li className=" hover:shadow-3xl  ">
-                <SiTailwindcss className=" fill-cyan-800 "  title="TailwindCss"  size="3rem" />
+              <li
+                className=" hover:shadow-3xl xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3   "
+              >
+                <SiTailwindcss
+                  className=" fill-cyan-800 "
+                  title="TailwindCss"
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars />
+                </span>
               </li>
-              <li className=" hover:shadow-3xl  ">
-                <BsBootstrap className="  fill-red-600  "  title="BootStrap" size="3rem" />
+              <li
+                className=" hover:shadow-3xl xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3   "
+              >
+                <BsBootstrap
+                  className="  fill-red-600  "
+                  title="BootStrap"
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars />
+                </span>
               </li>
-              <li className=" hover:shadow-3xl  ">
-                <FaFigma className=" fill-pink-200 "  title="Figma" icon="Figma
-                " size="3rem" />
+              <li
+                className=" hover:shadow-3xl xl:flex xl:flex-col xl:items-center xl:gap-y-1
+               lg:flex lg:flex-col lg:items-center lg:gap-y-2
+               s:flex s:flex-col s:items-center s:gap-y-3   "
+              >
+                <FaFigma
+                  className=" fill-pink-200 "
+                  title="Figma"
+                  icon="Figma
+                "
+                  size="3rem"
+                />
+                <span className=" s:scale-50">
+                  {" "}
+                  <Stars />
+                </span>
               </li>
             </ul>
             <div
