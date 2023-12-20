@@ -28,6 +28,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   // const [taggy, settaggy] = useState(null);
   const taggy = useRef(null);
+  const linky = useRef(null);
 
   const swap = () => {
     setToggle(!toggle);
@@ -39,34 +40,39 @@ const Header = () => {
     }
   };
 
-  const tagOf = () => {
-    if (toggle) {
+  const tagOf = (event) => {
+    const href = linky.current.getAttribute("href");
+    console.log(href);
+
+    if (toggle && !taggy.current.contains(event.target)) {
       setToggle(false);
     }
   };
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (taggy.current && !taggy.current.contains(event.target)) {
-        // Clicked outside the component, handle tag off
-        tagOf();
-      }
-    };
 
-    // Add event listener when the component mounts
-    window.addEventListener("click", handleClickOutside);
-    window.addEventListener("scroll", handleClickOutside);
+  const off = () => {
+    // window.location.href = "#projects"; // Use window.location.href to change the URL
+    if (toggle) {
+      setTimeout(() => {
+        setToggle(false);
+      }, 800);
+    }
+  };
 
-    // Clean up the event listener when the component unmounts
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-      document.removeEventListener("scroll", handleClickOutside);
-    };
-  }, [taggy]);
+  //   // Add event listener when the component mounts
+  //   window.addEventListener("click", handleClickOutside);
+  //   window.addEventListener("scroll", handleClickOutside);
+
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     document.removeEventListener("click", handleClickOutside);
+  //     document.removeEventListener("scroll", handleClickOutside);
+  //   };
+  // }, [taggy]);
 
   // Include taggy in the dependency array to re-run the effect when taggy changes
 
   return (
-    <Container ref={taggy} onClick={tagOf} className="  md:mt-2 ">
+    <Container onClick={tagOf} className="  md:mt-2 ">
       <Div1>
         <Link
           // ref={linkref}
@@ -131,7 +137,7 @@ const Header = () => {
           <AiFillGithub />
         </NavLink>
       </Div3>
-      <Div4 className=" relative  ">
+      <Div4 ref={taggy} className=" relative  ">
         {toggle ? (
           <>
             <ImCross
@@ -151,18 +157,20 @@ const Header = () => {
             >
               <ul className=" flex text-accent  flex-col z-10   align-middle  antialiased font-popins   justify-start text-left gap-y-4  transition-all duration-[1000ms] ease delay-250    hover:divide-amber-400 ">
                 <li>
-                  <a href="#projects">Projects</a>
+                  <a ref={linky} onClick={off} href="#projects" >
+                    Projects
+                  </a>
                 </li>
                 <li>
-                  <a href="#Tech" className=" smooth-scroll">
+                  <a onClick={off} href="#Tech" className=" smooth-scroll">
                     Tech
                   </a>
                 </li>
                 <li>
-                  <a href="#About">About</a>
+                  <a onClick={off} href="#About">About</a>
                 </li>
                 <li className=" flex  ">
-                  <a href="#Connect">Connect </a>
+                  <a onClick={off} href="#Connect">Connect </a>
                 </li>
               </ul>
             </div>

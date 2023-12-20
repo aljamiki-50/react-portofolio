@@ -23,7 +23,7 @@ const Section = () => {
   }, [welcomeWords]);
 
   return (
-    <div className=" relative
+    <div className=" relative -z-10
     s:flex s:flex-cols-1 s:gap-x-[70px] s:justify-center s:align-middle
     lg:flex lg:flex-cols-1 lg:gap-x-[70px] lg:justify-center lg:align-middle
     md:flex md:flex-cols-1 md:gap-x-[40px] md:justify-center md:align-middle
@@ -36,7 +36,7 @@ const Section = () => {
          xl:leading-[80px] xl:text-center xl:text-3xl
          lg:leading-[80px] lg:text-center lg:text-3xl
 
-         md:leading-[30px] md:text-center  md:text-3xl
+         md:leading-[60px] md:text-center  md:text-3xl
          
          
         s:leading-[80px] s:text-center s:text-xl ">
