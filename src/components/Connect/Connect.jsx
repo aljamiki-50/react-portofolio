@@ -22,6 +22,7 @@ const Connect = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const gmailAddress = "workathic@gmail.com";
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,9 +36,18 @@ const Connect = () => {
     };
 
     if (window.email) {
-      window.Email.send(config).then(() =>
-        alert("your Email succeffuly been sent ")
+      window.Email.send(config).then(
+        () =>
+          // alert("your Email succeffuly been sent ")
+          setSuccessMessage("Your email has been successfully sent!"),
+        setEmail(""),
+        setMessage(""),
+
+        setTimeout(() => {
+          setSuccessMessage("")
+        }, 5000)
       );
+
     } else {
       console.error("SMTP.js library not loaded.");
     }
@@ -70,11 +80,16 @@ const Connect = () => {
             {/* <h2 className="text-2xl font-bold mb-4 text-accent">Contact Me</h2> */}
             {/* start of the form */}
             {/* start of the form */}
+
             <form onSubmit={handleSubmit}>
+              {successMessage && (
+                <p className="bg-green-500 text-white px-4 py-2 rounded-md">
+                  {successMessage}
+                </p>
+              )}
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="email"
-                
               >
                 Email:
               </label>
@@ -145,12 +160,14 @@ const Connect = () => {
             {/* End of the form  */}
             {/* End of the form  */}
           </div>
-          <div className="  align-middle items-center  justify-around mt-1 
+          <div
+            className="  align-middle items-center  justify-around mt-1 
            s:flex-row s:flex s:mt-5
            md:flex-row md:flex md:mt-5
            lg:flex-row lg:flex lg:mt-5
 
-           xl:flex-row xl:flex ">
+           xl:flex-row xl:flex "
+          >
             {/* <a href=""> </a> */}
             <a
               href="https://t.me/workathic"
@@ -158,7 +175,11 @@ const Connect = () => {
               rel="noopener noreferrer"
             >
               {" "}
-              <PiTelegramLogo className=" fill-blue-400"  title="Telegram" size="3rem" />
+              <PiTelegramLogo
+                className=" fill-blue-400"
+                title="Telegram"
+                size="3rem"
+              />
             </a>
 
             <a
@@ -167,7 +188,11 @@ const Connect = () => {
               href="https://www.linkedin.com/in/liam-musa50/"
             >
               {" "}
-              <PiLinkedinLogo className=" fill-blue-400"  title="LinkedIn" size="3rem" />
+              <PiLinkedinLogo
+                className=" fill-blue-400"
+                title="LinkedIn"
+                size="3rem"
+              />
             </a>
 
             <a
@@ -175,7 +200,7 @@ const Connect = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillMail className=" fill-accent"  title="Mail" size="3rem" />
+              <AiFillMail className=" fill-accent" title="Mail" size="3rem" />
             </a>
           </div>
         </div>

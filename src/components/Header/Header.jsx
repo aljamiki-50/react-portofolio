@@ -26,7 +26,8 @@ import {
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
-  
+  // const [taggy, settaggy] = useState(null);
+  const taggy = useRef(null);
 
   const swap = () => {
     setToggle(!toggle);
@@ -38,13 +39,34 @@ const Header = () => {
     }
   };
 
-  
+  const tagOf = () => {
+    if (toggle) {
+      setToggle(false);
+    }
+  };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (taggy.current && !taggy.current.contains(event.target)) {
+        // Clicked outside the component, handle tag off
+        tagOf();
+      }
+    };
 
+    // Add event listener when the component mounts
+    window.addEventListener("click", handleClickOutside);
+    window.addEventListener("scroll", handleClickOutside);
 
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("scroll", handleClickOutside);
+    };
+  }, [taggy]);
 
+  // Include taggy in the dependency array to re-run the effect when taggy changes
 
   return (
-    <Container className="  md:mt-2 ">
+    <Container ref={taggy} onClick={tagOf} className="  md:mt-2 ">
       <Div1>
         <Link
           // ref={linkref}
@@ -74,30 +96,42 @@ const Header = () => {
         <a href="#Tech">
           <NavLink>Tech</NavLink>
         </a>
-        <a href="#About" >
+        <a href="#About">
           <NavLink>About</NavLink>
         </a>
         {/* <div className="s:hidden">hey it s  me </div> */}
       </Div2>
       <Div3 className=" s:hidden md:hidden">
-        <NavLink  target="_blank"
-              rel="noopener noreferrer"href="https://www.linkedin.com/">
+        <NavLink
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/liam-musa50/"
+        >
           <AiFillLinkedin />
         </NavLink>
-        <NavLink target="_blank"
-              rel="noopener noreferrer" href="http://instgram.com">
+        <NavLink
+          className="hidden"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://instgram.com"
+        >
           <AiFillInstagram />
         </NavLink>
-        <NavLink target="_blank"
-              rel="noopener noreferrer" href="#Connect">
-          <AiTwotoneEdit />
+
+        <NavLink target="_blank" rel="noopener noreferrer">
+          <a href="#Connect">
+            <AiTwotoneEdit />
+          </a>
         </NavLink>
-        <NavLink target="_blank"
-              rel="noopener noreferrer"   href="https://github.com/aljamiki-50" >
+        <NavLink
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/aljamiki-50"
+        >
           <AiFillGithub />
         </NavLink>
       </Div3>
-      <Div4  className=" relative  ">
+      <Div4 className=" relative  ">
         {toggle ? (
           <>
             <ImCross

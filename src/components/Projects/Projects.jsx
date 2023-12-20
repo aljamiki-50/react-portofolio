@@ -29,29 +29,66 @@ import { TbBrandAlpineJs } from "react-icons/tb";
 // import { SiLivewire } from "react-icons/si";
 
 const Projects = () => {
-  const containerRef = useRef(null);
+  // const containerRef = useRef(null);
+  const containerRef1 = useRef(null);
+  const containerRef2 = useRef(null);
+  const containerRef3 = useRef(null);
+  const containerRef4 = useRef(null);
+
+  const imgref = useRef(null);
+
+  const applyScrollBehavior = (ContRef) => {
+    const imgwidth = imgref.current.clientWidth;
+    const interval = setInterval(() => {
+      if (
+        ContRef.current.scrollLeft + ContRef.current.clientWidth ==
+        ContRef.current.scrollWidth
+      ) {
+        ContRef.current.scrollLeft = 0;
+        ContRef.current.style.scrollBehavior = "smooth";
+        ContRef.current.style.overflow = "auto"; // For WebKit
+
+      } else {
+        ContRef.current.scrollLeft += ContRef.current.clientWidth;
+        ContRef.current.style.scrollBehavior = "smooth";
+        ContRef.current.style.overflow = "auto"; // For WebKit
+
+      }
+    }, 8000);
+    return () => {
+      clearInterval(interval);
+    };
+  };
 
   useEffect(() => {
-    const container = containerRef.current;
+    applyScrollBehavior(containerRef1);
+  }, [containerRef1]);
 
-    const intervalId = setInterval(() => {
-      // Scroll left by the container's width
-      if (
-        container.scrollLeft + container.clientWidth ===
-        container.scrollWidth
-      ) {
-        // If at the end, reset to the beginning
-        container.scrollLeft = 0;
-      } else {
-        // Scroll left by the container's width
-        container.scrollLeft += container.clientWidth;
-      }
-    }, 5000);
+  useEffect(() => {
+    applyScrollBehavior(containerRef2);
+  }, [containerRef2]);
+  useEffect(() => {
+    applyScrollBehavior(containerRef3);
+  }, [containerRef3]);
+  useEffect(() => {
+    applyScrollBehavior(containerRef4);
+  }, [containerRef4]);
 
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+  //   const intervalId = setInterval(() => {
+  //     if (
+  //       container.scrollLeft + container.clientWidth ==
+  //       container.scrollWidth
+  //     ) {
+  //       container.scrollLeft = 0;
+  //     } else {
+  //       container.scrollLeft += container.clientWidth;
+  //     }
+  //   }, 5000);
+
+  //   return () => {
+  //     clearInterval(intervalId);
+  //   };
+  // }, []);
 
   return (
     <div
@@ -66,45 +103,50 @@ const Projects = () => {
          flex flex-col  gap-y-10 text-center   ring-1 ring-black s:ring-accent  
          md:rounded-tl-[30px] md:rounded-tr-[30px]   "
       >
-        <div className=" s:flex s:flex-col  s:pb-3   s:items-center
+        <div
+          className=" s:flex s:flex-col  s:pb-3   s:items-center
         md:flex md:flex-col  md:pb-3   md:items-center
         lg:flex lg:flex-col  lg:pb-3   lg:items-center
         xl:flex xl:flex-col  xl:pb-3   xl:items-center
          gap-y-4
-          flex  justify-center   border-b-[5px] border-b-accent s:border-b-transparent       ">
+          flex  justify-center   border-b-[5px] border-b-accent s:border-b-transparent       "
+        >
           <div
             className="   
             flex w-full gap-x-4   overflow-auto"
-            ref={containerRef}
+            ref={containerRef1}
           >
             <img
+              ref={imgref}
               src={food1}
               className="  rounded-tr-3xl  rounded-tl-3xl ring-4 ring-black  w-full md:rounded-tl-[30px] md:rounded-tr-[30px] md:pt-[1.2px]   "
-              alt="Project1"
+              alt="food1"
             />
             <img
               src={food2}
               className="  rounded-tr-3xl  rounded-tl-3xl   w-full md:rounded-tl-[30px] md:rounded-tr-[30px] md:pt-[1.2px]   "
-              alt="Project1"
+              alt="food2"
             />
             <img
               src={food1}
               className="  rounded-tr-3xl  rounded-tl-3xl   w-full md:rounded-tl-[30px] md:rounded-tr-[30px] md:pt-[1.2px]   "
-              alt="Project1"
+              alt="food3"
             />
           </div>
 
           <h1 className=" hidden s:block  font-bold text-5xl text-white-400/75 s:text-lg   ">
-          Restaurant L.P
+            Restaurant L.P
           </h1>
 
-          <div className=" liam hidden
+          <div
+            className=" liam hidden
            s:flex s:flex-row s:space-between s:gap-x-10 
             md:flex md:flex-row md:space-between md:gap-x-10  md:py-8 md:scale-125
             lg:flex lg:flex-row lg:space-between lg:gap-x-10  lg:py-8 lg:scale-125
             xl:flex xl:flex-row xl:space-between xl:gap-x-10  xl:py-8 xl:scale-125
           
-             bg-transparent ">
+             bg-transparent "
+          >
             <a
               href="https://github.com/aljamiki-50/Food/tree/main/food-landingpage"
               target="_blank"
@@ -137,7 +179,7 @@ const Projects = () => {
         s:flex   s:pb-5 "
         >
           <h1 className="  s:hidden font-bold text-5xl text-white-400/75 s:text-lg   ">
-          Restaurant L.P
+            Restaurant L.P
           </h1>
 
           <div className="  border-b-[5px] w-[10%]   h-3  border-solid border-accent s:flex s:w-[50%] " />
@@ -184,7 +226,7 @@ const Projects = () => {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              alt
+              // alt
             >
               <SiAlpinedotjs
                 className=" hidden fill-blue-600"
@@ -224,30 +266,32 @@ const Projects = () => {
          flex flex-col  gap-y-10 text-center   ring-1 ring-black s:ring-accent  
          md:rounded-tl-[30px] md:rounded-tr-[30px]   "
       >
-        <div className=" s:flex s:flex-col  s:pb-3   s:items-center gap-y-4 
+        <div
+          className=" s:flex s:flex-col  s:pb-3   s:items-center gap-y-4 
          md:flex md:flex-col  md:pb-3   md:items-center 
          lg:flex lg:flex-col  lg:pb-3   lg:items-center 
          xl:flex xl:flex-col  xl:pb-3   xl:items-center 
-         flex  justify-center   border-b-[5px] border-b-accent s:border-b-transparent       ">
+         flex  justify-center   border-b-[5px] border-b-accent s:border-b-transparent       "
+        >
           <div
             className="   
             flex w-full gap-x-4   overflow-auto"
-            ref={containerRef}
+            ref={containerRef2}
           >
             <img
               src={movie1}
               className="  rounded-tr-3xl  rounded-tl-3xl ring-4 ring-black  w-full md:rounded-tl-[30px] md:rounded-tr-[30px] md:pt-[1.2px]   "
-              alt="Project1"
+              alt="movie1"
             />
             <img
               src={movie2}
               className="  rounded-tr-3xl  rounded-tl-3xl   w-full md:rounded-tl-[30px] md:rounded-tr-[30px] md:pt-[1.2px]   "
-              alt="Project1"
+              alt="movie2"
             />
             <img
               src={movie3}
               className="  rounded-tr-3xl  rounded-tl-3xl   w-full md:rounded-tl-[30px] md:rounded-tr-[30px] md:pt-[1.2px]   "
-              alt="Project1"
+              alt="movie3"
             />
           </div>
 
@@ -255,7 +299,8 @@ const Projects = () => {
             Movie DB
           </h1>
 
-          <div className=" liam  
+          <div
+            className=" liam  
           s:flex s:flex-row s:space-between s:gap-x-10 
           md:flex md:flex-row md:space-between md:gap-x-10  md:py-8 
           lg:flex lg:flex-row lg:space-between lg:gap-x-10  lg:py-8 
@@ -263,7 +308,8 @@ const Projects = () => {
 
 
 
-bg-transparent ">
+bg-transparent "
+          >
             <a
               href="https://github.com/aljamiki-50/Movie-DB"
               target="_blank"
@@ -381,15 +427,17 @@ bg-transparent ">
          flex flex-col  gap-y-10 text-center   ring-1 ring-black s:ring-accent  
          md:rounded-tl-[30px] md:rounded-tr-[30px]   "
       >
-        <div className=" s:flex s:flex-col  s:pb-3   s:items-center 
+        <div
+          className=" s:flex s:flex-col  s:pb-3   s:items-center 
         md:flex md:flex-col md:items-center
         lg:flex lg:flex-col lg:items-center
         xl:flex xl:flex-col xl:items-center
-        gap-y-4  flex  justify-center   border-b-[5px] border-b-accent s:border-b-transparent       ">
+        gap-y-4  flex  justify-center   border-b-[5px] border-b-accent s:border-b-transparent       "
+        >
           <div
             className="   
             flex w-full gap-x-4   overflow-auto"
-            ref={containerRef}
+            ref={containerRef3}
           >
             <img
               src={Ai1}
@@ -412,12 +460,14 @@ bg-transparent ">
             AI L.P
           </h1>
 
-          <div className=" liam  s:flex s:flex-row s:space-between s:gap-x-10 
+          <div
+            className=" liam  s:flex s:flex-row s:space-between s:gap-x-10 
           md:flex md:flex-row md:space-between md:gap-x-10  md:py-8 
           lg:flex lg:flex-row lg:space-between lg:gap-x-10  lg:py-8 
           xl:flex xl:flex-row xl:space-between xl:gap-x-10  xl:py-8 
 
-            bg-transparent ">
+            bg-transparent "
+          >
             <a
               href="https://github.com/aljamiki-50/react-demo-project"
               target="_blank"
@@ -483,11 +533,7 @@ bg-transparent ">
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaReact
-                className=" fill-indigo-600"
-                size={32}
-                title="React "
-              />
+              <FaReact className=" fill-indigo-600" size={32} title="React " />
             </a>
             <a
               href="https://github.com"
@@ -533,43 +579,47 @@ bg-transparent ">
          flex flex-col  gap-y-10 text-center   ring-1 ring-black s:ring-accent  
          md:rounded-tl-[30px] md:rounded-tr-[30px]   "
       >
-        <div className=" s:flex s:flex-col  s:pb-3   s:items-center
+        <div
+          className=" s:flex s:flex-col  s:pb-3   s:items-center
         md:flex md:flex-col md:items-center
         lg:flex lg:flex-col lg:items-center
         xl:flex xl:flex-col xl:items-center
-         gap-y-4  flex  justify-center   border-b-[5px] border-b-accent s:border-b-transparent       ">
+         gap-y-4  flex  justify-center   border-b-[5px] border-b-accent s:border-b-transparent       "
+        >
           <div
             className="   
             flex w-full gap-x-4   overflow-auto"
-            ref={containerRef}
+            ref={containerRef4}
           >
             <img
               src={bank1}
               className="  rounded-tr-3xl  rounded-tl-3xl ring-4 ring-black  w-full md:rounded-tl-[30px] md:rounded-tr-[30px] md:pt-[1.2px]   "
-              alt="Project1"
+              alt="bank1"
             />
             <img
               src={bank2}
               className="  rounded-tr-3xl  rounded-tl-3xl   w-full md:rounded-tl-[30px] md:rounded-tr-[30px] md:pt-[1.2px]   "
-              alt="Project1"
+              alt="bank2"
             />
-            {/* <img
-              src={Ai3}
+            <img
+              src={bank1}
               className="  rounded-tr-3xl  rounded-tl-3xl   w-full md:rounded-tl-[30px] md:rounded-tr-[30px] md:pt-[1.2px]   "
-              alt="Project1"
-            /> */}
+              alt="bank1"
+            />
           </div>
 
           <h1 className=" hidden s:block  font-bold text-5xl text-white-400/75 s:text-lg   ">
             Bank L.P
           </h1>
 
-          <div className=" liam  s:flex s:flex-row s:space-between s:gap-x-10 
+          <div
+            className=" liam  s:flex s:flex-row s:space-between s:gap-x-10 
           md:flex md:justify-between md:items-center  md:gap-x-10  md:py-8
           lg:flex lg:justify-between lg:items-center  lg:gap-x-10  lg:py-8
           xl:flex xl:justify-between xl:items-center  xl:gap-x-10  xl:py-8
           
-            bg-transparent ">
+            bg-transparent "
+          >
             <a
               href="https://github.com/aljamiki-50/Banking-react-project"
               target="_blank"
@@ -601,7 +651,7 @@ bg-transparent ">
         s:flex   s:pb-5 "
         >
           <h1 className="  s:hidden font-bold text-5xl text-white-400/75 s:text-lg   ">
-           Bank L.P
+            Bank L.P
           </h1>
 
           <div className="  border-b-[5px] w-[10%]   h-3  border-solid border-accent s:flex s:w-[50%] " />

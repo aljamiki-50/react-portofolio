@@ -27,10 +27,10 @@ function App() {
         {/* <Projects/> */}
        
 
-        <Routes>
-          <Route path="/react" element={<Hero />} />
+        {/* <Routes> */}
+          {/* <Route path="/react" element={<Hero />} /> */}
 {/* <Route path="/projects" element={<Projects />} /> */}
-        </Routes>
+        {/* </Routes> */}
        
       </Router>
      

@@ -16,7 +16,7 @@ import { FaFigma } from "react-icons/fa6";
 import { SiAlpinedotjs, SiTailwindcss } from "react-icons/si";
 import Stars from "./stars";
 import Stars4 from "./Stars4";
-import Stars35 from "./Stars35"
+import Stars35 from "./Stars35";
 
 import "typeface-poppins";
 import "typeface-roboto";
@@ -38,6 +38,7 @@ const Techs = () => {
           <h1 className=" flex gap-x-2  left-0 text-left py-6 text-7xl font-bold decoreation-4 text-{#0c0e14}  decoration-{#6687D7}   ">
             <GrTechnology />
             <span> :-</span>
+
             {/* Technologies */}
           </h1>
           <p className=" xl:w-[50%] xl:pb-4  font-poppins   antialiased s:hidden text-left ">
@@ -154,7 +155,6 @@ const Techs = () => {
                 <span className=" s:scale-50">
                   {" "}
                   <Stars35 />
-
                 </span>
               </li>
               <li
@@ -170,7 +170,6 @@ const Techs = () => {
                 <span className=" s:scale-50">
                   {" "}
                   <Stars35 />
-
                 </span>
               </li>
             </ul>
@@ -335,7 +334,7 @@ const Techs = () => {
                 />
                 <span className=" s:scale-50">
                   {" "}
-                  <Stars />
+                  <Stars35 />
                 </span>
               </li>
               <li
@@ -365,7 +364,7 @@ const Techs = () => {
                 />
                 <span className=" s:scale-50">
                   {" "}
-                  <Stars />
+                  <Stars35 />
                 </span>
               </li>
               <li
@@ -382,7 +381,7 @@ const Techs = () => {
                 />
                 <span className=" s:scale-50">
                   {" "}
-                  <Stars />
+                  <Stars35 />
                 </span>
               </li>
             </ul>
